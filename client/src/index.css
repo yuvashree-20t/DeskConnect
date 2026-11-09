@@ -1,0 +1,1013 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fb;
+  color: #182230;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+select {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.muted {
+  color: #7c8798;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.brand {
+  font-size: 23px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  color: #60a5fa;
+}
+
+/* =========================
+   LOGIN & REGISTER
+========================= */
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #101c35, #1e3a64);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 38px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.auth-card .brand {
+  color: #172d4d;
+}
+
+.auth-card h2 {
+  margin: 30px 0 5px;
+  font-size: 25px;
+}
+
+.auth-card label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 18px 0 8px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dce2eb;
+  border-radius: 8px;
+  outline: none;
+  background: white;
+}
+
+.auth-card input:focus {
+  border-color: #3979d5;
+  box-shadow: 0 0 0 3px rgba(57, 121, 213, 0.1);
+}
+
+.auth-card .primary-btn {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 13px;
+  color: #718096;
+}
+
+.auth-footer a {
+  color: #2868c7;
+  font-weight: 600;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn {
+  border: none;
+  background: #2868c7;
+  color: white;
+  padding: 13px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: #1d55a7;
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondary-btn,
+.delete-btn {
+  border: 1px solid #dce2eb;
+  background: white;
+  padding: 9px 13px;
+  border-radius: 7px;
+  font-size: 12px;
+}
+
+.secondary-btn {
+  color: #2868c7;
+}
+
+.delete-btn {
+  color: #c03939;
+}
+
+.logout-btn {
+  margin-top: auto;
+  background: transparent;
+  color: #ffb4b4;
+  border: 1px solid #40516b;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* =========================
+   ALERT MESSAGES
+========================= */
+
+.error,
+.success {
+  padding: 11px;
+  border-radius: 7px;
+  margin: 12px 0;
+  font-size: 13px;
+}
+
+.error {
+  color: #b42318;
+  background: #fff0ee;
+}
+
+.success {
+  color: #067647;
+  background: #ecfdf3;
+}
+
+/* =========================
+   MAIN APPLICATION LAYOUT
+========================= */
+
+.app-layout {
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 245px;
+  position: fixed;
+  inset: 0 auto 0 0;
+  background: #14243d;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-label {
+  margin-top: 40px;
+  color: #8496b0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.nav-link {
+  color: #b9c6d9;
+  padding: 13px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: white;
+  background: #263d5f;
+}
+
+.main-content {
+  margin-left: 245px;
+  padding: 35px 42px;
+  max-width: 1500px;
+}
+
+/* =========================
+   TOP NAVIGATION
+========================= */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.topbar h2 {
+  margin-bottom: 5px;
+}
+
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #dceaff;
+  color: #2868c7;
+}
+
+.back-link {
+  color: #2868c7;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* =========================
+   DASHBOARD WELCOME
+========================= */
+
+.welcome {
+  padding: 28px;
+  border-radius: 14px;
+  background: linear-gradient(110deg, #1e4c86, #3478c8);
+  color: white;
+  margin-bottom: 25px;
+}
+
+.welcome h2 {
+  margin-bottom: 8px;
+}
+
+.welcome p {
+  color: #d9e8ff;
+  font-size: 13px;
+}
+
+/* =========================
+   DASHBOARD STATISTICS
+========================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.stat-card,
+.form-panel,
+.data-card,
+.recent-section {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #e9edf3;
+  box-shadow: 0 3px 12px rgba(20, 36, 61, 0.03);
+}
+
+.stat-card span {
+  color: #718096;
+  font-size: 13px;
+}
+
+.stat-card h2 {
+  font-size: 30px;
+  margin: 12px 0 5px;
+}
+
+.stat-card small,
+.small-text {
+  color: #8994a4;
+  font-size: 11px;
+}
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+
+.quick-actions,
+.recent-section,
+.list-section {
+  margin-top: 30px;
+}
+
+.quick-actions h3,
+.recent-section h3,
+.list-section > h3 {
+  margin-bottom: 16px;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 22px;
+  background: white;
+  border: 1px solid #e9edf3;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.action-card:hover {
+  transform: translateY(-3px);
+  border-color: #91b9ee;
+}
+
+.action-card span {
+  color: #2868c7;
+  font-size: 23px;
+}
+
+.action-card small {
+  color: #8994a4;
+}
+
+/* =========================
+   RECENT TASKS
+========================= */
+
+.recent-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf0f4;
+  font-size: 13px;
+}
+
+/* =========================
+   STATUS LABELS
+========================= */
+
+.status,
+.priority {
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.status.Open {
+  background: #fff4d6;
+  color: #956500;
+}
+
+.status.In-Progress {
+  background: #e6f0ff;
+  color: #245ca8;
+}
+
+.status.Completed,
+.status.Resolved {
+  background: #dcfce7;
+  color: #16803d;
+}
+
+.status.Closed {
+  background: #eeeeee;
+  color: #555;
+}
+
+/* =========================
+   PRIORITY LABELS
+========================= */
+
+.priority.Low {
+  background: #e8f5e9;
+  color: #26723a;
+}
+
+.priority.Medium {
+  background: #e6f0ff;
+  color: #245ca8;
+}
+
+.priority.High {
+  background: #fff0d9;
+  color: #a65c00;
+}
+
+.priority.Urgent {
+  background: #ffe4e4;
+  color: #b42318;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+.form-panel {
+  max-width: 760px;
+}
+
+.form-panel h3 {
+  margin-bottom: 20px;
+}
+
+.data-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.data-form input,
+.data-form textarea,
+.data-form select,
+.card-actions select {
+  width: 100%;
+  border: 1px solid #dce2eb;
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.data-form input:focus,
+.data-form textarea:focus,
+.data-form select:focus,
+.card-actions select:focus {
+  border-color: #3979d5;
+}
+
+.data-form textarea {
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* =========================
+   TASK AND TICKET CARDS
+========================= */
+
+.data-card {
+  margin-top: 15px;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-heading h3 {
+  font-size: 16px;
+}
+
+.data-card > p {
+  margin-top: 12px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.card-actions select {
+  width: auto;
+  min-width: 140px;
+  padding: 9px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1100px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-content {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .sidebar-label {
+    margin-top: 10px;
+  }
+
+  .logout-btn {
+    margin-top: 10px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 18px;
+  }
+
+  .stats-grid,
+  .action-grid,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .auth-card {
+    padding: 25px;
+  }
+
+  .card-actions {
+    align-items: stretch;
+  }
+
+  .card-actions select {
+    width: 100%;
+  }
+}
+
+/* Admin Task Management */
+
+.data-section {
+    background: #ffffff;
+    padding: 25px;
+    margin-top: 28px;
+    border: 1px solid #e5eaf2;
+    border-radius: 15px;
+}
+
+.data-section h2 {
+    margin: 0 0 18px;
+}
+
+.data-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #344054;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select,
+.filter-select,
+.task-admin-actions select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d8dfeb;
+    border-radius: 8px;
+    background: #fff;
+    color: #172b4d;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3478d4;
+    box-shadow: 0 0 0 3px rgba(52, 120, 212, 0.12);
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.primary-btn,
+.secondary-btn,
+.delete-btn {
+    padding: 11px 17px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: #2868b2;
+    color: white;
+    align-self: flex-start;
+}
+
+.primary-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.secondary-btn {
+    background: white;
+    color: #2868b2;
+    border: 1px solid #d8dfeb;
+}
+
+.delete-btn {
+    background: #fff0f0;
+    color: #c62828;
+    align-self: flex-end;
+}
+
+.section-heading,
+.task-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.section-heading p,
+.task-card-header p {
+    color: #667085;
+    margin-top: 5px;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.admin-task-card {
+    border: 1px solid #e5eaf2;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.task-card-header h3 {
+    margin: 0;
+}
+
+.task-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    margin: 20px 0;
+    color: #667085;
+    font-size: 14px;
+}
+
+.task-details strong {
+    color: #172b4d;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-badge.open {
+    background: #fff3d6;
+    color: #9a6700;
+}
+
+.status-badge.in-progress {
+    background: #e5f0ff;
+    color: #175cd3;
+}
+
+.status-badge.completed {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.task-admin-actions {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 14px;
+    border-top: 1px solid #edf0f5;
+    padding-top: 16px;
+}
+
+.task-admin-actions .form-group {
+    flex: 1;
+    min-width: 160px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 35px 15px;
+    color: #667085;
+}
+
+.error-message {
+    margin-top: 18px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: #fff0f0;
+    color: #b42318;
+}
+
+@media (max-width: 700px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .section-heading,
+    .task-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-admin-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .delete-btn {
+        align-self: flex-start;
+    }
+}
+
+/* Admin Support Ticket Management */
+
+.ticket-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    margin: 20px 0;
+    color: #667085;
+    font-size: 14px;
+}
+
+.ticket-details strong {
+    color: #172b4d;
+}
+
+.priority-low {
+    color: #15803d !important;
+}
+
+.priority-medium {
+    color: #b7791f !important;
+}
+
+.priority-high {
+    color: #d97706 !important;
+}
+
+.priority-urgent {
+    color: #dc2626 !important;
+}
+
+.admin-task-card .task-admin-actions {
+    margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+    .ticket-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Employee Portal */
+
+.task-status-control {
+    max-width: 280px;
+    margin-top: 16px;
+}
+
+.permission-note {
+    color: #667085;
+    font-size: 13px;
+    margin-top: 14px;
+    padding: 10px 12px;
+    background: #f5f7fa;
+    border-radius: 8px;
+}
+
+.data-form .form-row {
+    display: flex;
+    gap: 16px;
+}
+
+@media (max-width: 700px) {
+    .data-form .form-row {
+        flex-direction: column;
+    }
+}
+
+/* DeskConnect - Final UI Polish */
+
+.sidebar {
+    background: #142640;
+    color: #ffffff;
+}
+
+.sidebar-logo {
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.sidebar-logo span {
+    color: #60a5fa;
+}
+
+.sidebar-label {
+    color: #91a9c8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.sidebar-nav a {
+    display: block;
+    color: #d7e3f3;
+    text-decoration: none;
+    padding: 13px 15px;
+    margin: 5px 0;
+    border-radius: 9px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+    background: #203b5f;
+    color: #ffffff;
+}
+
+.sidebar-nav a.active {
+    background: #29466c;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.logout-btn {
+    color: #ffaaaa;
+    border: 1px solid #405570;
+    background: transparent;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: #263c59;
+}
+
+.main-content {
+    min-width: 0;
+}
+
+.data-section,
+.stat-card,
+.data-card {
+    box-shadow: 0 5px 18px rgba(20, 38, 64, 0.035);
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(59, 130, 246, 0.35);
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .sidebar-nav a {
+        margin: 0;
+    }
+
+    .logout-btn {
+        margin-top: 12px;
+    }
+
+    .main-content {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 14px;
+    }
+
+    .data-section {
+        padding: 16px;
+    }
+}
